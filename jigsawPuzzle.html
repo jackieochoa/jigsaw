@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Jigsaw Puzzle</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Drag and drop jigsaw puzzle">
+    <meta name="author" content="Jackie Ochoa">
+    <script type="text/javascript" src="jigsawPuzzle.js"></script>
+    <link rel="stylesheet" href="jigsawPuzzle.css">
+</head>
+
+<body onload="chooseImageSet()">
+    <button id = "button" onclick="endTimer()">Done</button>
+    <div id="timerText">Time: 0 second(s)</div>
+    <div id="puzzleMessage"></div>
+    <img id="frame" src="puzzleback.gif" alt="back of puzzle" width="400" height="300">
+
+    <!--SET ALL IMAGES IN CONTAINERS OVER EACHOTHER-->
+    <span id="1" style="position: absolute; top: 0px; left: 0px;" onmousedown="grabber(event);">
+        <!--img?-1 here-->
+        <img id="1-1" src="img1-1.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-1" src="img2-1.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-1" src="img3-1.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="2" style="position: absolute; top: 0px; left: 0px;" onmousedown="grabber(event);">
+        <!--img?-2 here-->
+        <img id="1-2" src="img1-2.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-2" src="img2-2.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-2" src="img3-2.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="3" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-3 here-->
+        <img id="1-3" src="img1-3.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-3" src="img2-3.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-3" src="img3-3.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="4" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-4 here-->
+        <img id="1-4" src="img1-4.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-4" src="img2-4.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-4" src="img3-4.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="5" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-5 here-->
+        <img id="1-5" src="img1-5.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-5" src="img2-5.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-5" src="img3-5.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="6" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-6 here-->
+        <img id="1-6" src="img1-6.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-6" src="img2-6.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-6" src="img3-6.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="7" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-7 here-->
+        <img id="1-7" src="img1-7.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-7" src="img2-7.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-7" src="img3-7.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="8" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-8 here-->
+        <img id="1-8" src="img1-8.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-8" src="img2-8.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-8" src="img3-8.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="9" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-9 here-->
+        <img id="1-9" src="img1-9.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-9" src="img2-9.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-9" src="img3-9.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="10" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-10 here-->
+        <img id="1-10" src="img1-10.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-10" src="img2-10.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-10" src="img3-10.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="11" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-11 here-->
+        <img id="1-11" src="img1-11.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-11" src="img2-11.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-11" src="img3-11.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+
+    <span id="12" style="position: absolute; top: 0px; left:   0px;" onmousedown="grabber(event);">
+        <!--img?-12 here-->
+        <img id="1-12" src="img1-12.jpg" alt="image from set 1" width="100" height="100">
+        <img id="2-12" src="img2-12.jpg" alt="image from set 2" width="100" height="100">
+        <img id="3-12" src="img3-12.jpg" alt="image from set 3" width="100" height="100">
+    </span>
+</body>
+
+</html>

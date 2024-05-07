@@ -1,0 +1,28 @@
+span {
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+ }
+
+ img {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+ }
+
+ button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+ }
+
+ div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+ }
